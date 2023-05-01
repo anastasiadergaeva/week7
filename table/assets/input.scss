@@ -28,11 +28,11 @@
         &__main-part {
             grid-area: 1/1/2/2;
     
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1.5fr 1fr 1fr;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1.5fr 1fr 1fr;
     
-        background-color: beige;
+            background-color: beige;
 
             .item1 {
                 grid-area: 1/1/2/3;
@@ -103,6 +103,60 @@
         max-width: 600px; 
         padding-left: 20px; 
         padding-right: 20px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 10em 40em 15em;
+
+        .header {
+            grid-area: 1/1/2/3;
+        
+            height: 100%;
+            background-color: gainsboro;
+            padding-bottom: 0;
+        }
+
+        .main-content {
+            margin: 0 auto;
+            grid-area: 2/1/3/2;
+            display: grid;
+            grid-template-columns: 27em 10.5em;
+            grid-template-rows: 40em;
+            justify-items: stretch;
+
+            &__main-part {
+                grid-area: 1/1/2/2;
+        
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1.5fr 1fr 1fr 1fr;
+        
+                background-color: beige;
+    
+                .item1 {
+                    grid-area: 1/1/2/2;
+                }
+                
+                .item2 {
+                    grid-area: 2/1/3/2;
+                }
+                
+                .item3 {
+                    grid-area: 3/1/4/2;
+                }
+                
+                .item4 {
+                    grid-area: 4/1/5/2;
+                }
+            }
+    
+            &__sidebar {
+                grid-area: 1/2/2/3;
+    
+                background-color:rgb(144, 187, 144);
+            }
+        }
 
         .footer {
             width: 600px;
@@ -144,6 +198,18 @@
         max-width: 480px; 
         padding-left: 16px; 
         padding-right: 16px; 
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 5em 20em 5em;
+
+        .header {
+            grid-area: 1/1/2/3;
+        
+            background-color: gainsboro;
+            padding-bottom: 0;
+        }
     }
 }
 
